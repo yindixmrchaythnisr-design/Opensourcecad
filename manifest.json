@@ -1,0 +1,21 @@
+{
+  "name": "Fusion Lite Web CAD",
+  "short_name": "Fusion Lite",
+  "description": "A zero-backend, browser-based CAD modeling tool.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1e1e1e",
+  "theme_color": "#007acc",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
