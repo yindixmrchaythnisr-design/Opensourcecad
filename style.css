@@ -1,0 +1,135 @@
+:root {
+    --bg-dark: #1e1e1e;
+    --bg-panel: #252526;
+    --text-main: #cccccc;
+    --accent: #007acc;
+    --border: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#app-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 50px 1fr 40px;
+    height: 100vh;
+}
+
+/* Toolbar */
+#toolbar {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    background-color: var(--bg-panel);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 20px;
+}
+
+.tool-group {
+    display: flex;
+    gap: 5px;
+}
+
+.tool-btn {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid transparent;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.tool-btn:hover {
+    background-color: #333333;
+    border-color: var(--border);
+}
+
+.math-btn {
+    color: #4fc1ff;
+}
+
+/* Feature Tree */
+#feature-tree {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: var(--bg-panel);
+    border-right: 1px solid var(--border);
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#feature-tree h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #888;
+}
+
+#history-list {
+    list-style: none;
+}
+
+.tree-item {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tree-item:hover {
+    background-color: #333333;
+}
+
+/* Viewport */
+#viewport-container {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #3a3a3a 0%, #1e1e1e 100%);
+}
+
+/* Timeline */
+#timeline {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    background-color: var(--bg-panel);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.timeline-track {
+    width: 100%;
+    height: 4px;
+    background-color: #444;
+    position: relative;
+    border-radius: 2px;
+}
+
+.timeline-marker {
+    width: 12px;
+    height: 16px;
+    background-color: var(--accent);
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    cursor: ew-resize;
+    border-radius: 2px;
+}
