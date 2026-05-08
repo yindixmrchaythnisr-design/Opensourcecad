@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion Lite - Web CAD</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="app-container">
+        <header id="toolbar">
+            <div class="tool-group">
+                <button id="btn-extrude" class="tool-btn">Extrude</button>
+                <button id="btn-revolve" class="tool-btn">Revolve</button>
+                <button id="btn-fillet" class="tool-btn">Fillet</button>
+            </div>
+            <div class="tool-group">
+                <button id="btn-math" class="tool-btn math-btn">Math Sketch</button>
+            </div>
+        </header>
+
+        <aside id="feature-tree">
+            <h3>Browser</h3>
+            <ul id="history-list">
+                <li class="tree-item">Origin</li>
+                <li class="tree-item">XY Plane</li>
+                <li class="tree-item">XZ Plane</li>
+                <li class="tree-item">YZ Plane</li>
+            </ul>
+        </aside>
+
+        <main id="viewport-container">
+            </main>
+
+        <footer id="timeline">
+            <div class="timeline-track">
+                <div class="timeline-marker"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="js/viewer.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
